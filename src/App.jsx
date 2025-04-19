@@ -1,34 +1,36 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import SideNav from "./components/SideNav"
+import { BrowserRouter, Route,Routes } from "react-router-dom"
+import Dashboard from "./pages/Dashboard"
+import Reservations from "./pages/reservations"
+import Schedules from "./pages/schedules"
+import Students from "./pages/students"
+import Teachers from "./pages/teachers"
+import Finances from "./pages/finances"
+import Reports from "./pages/reports"
+import Messages from "./pages/messages"
+import Permissions from "./pages/permissions"
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <BrowserRouter>
+    <div dir="rtl" lang="ar" className="flex">
+      <SideNav/>
+      <div className="flex-1">
+        <Routes>
+          <Route path="/dashboard" element={<Dashboard/>}/>
+          <Route path="/reservations" element={<Reservations/>}/>
+          <Route path="/schedules" element={<Schedules/>}/>
+          <Route path="/students" element={<Students/>}/>
+          <Route path="/teachers" element={<Teachers/>}/>
+          <Route path="/finances" element={<Finances/>}/>
+          <Route path="/reports" element={<Reports/>}/>
+          <Route path="/messages" element={<Messages/>}/>
+          <Route path="/permissions" element={<Permissions/>}/>
+        </Routes>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    </div>
+    </BrowserRouter>
   )
 }
 
