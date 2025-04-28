@@ -1,57 +1,60 @@
- import ControlIcon  from '../assets/icons/controlIcon.svg'
- import ReservationsIcon from '../assets/icons/ReservationsIcon.svg'
- import SchedulesIcon from '../assets/icons/scheduleIcon.svg'
- import StudentsIcon from '../assets/icons/studentsIcon.svg'
- import TeachersIcon from '../assets/icons/teachersIcon.svg'
- import FinancesIcon from '../assets/icons/FinancesIcon.svg'
- import ReportsIcon from '../assets/icons/reportsIcon.svg'
- import SmsIcon from '../assets/icons/smsIcon.svg'
- import PermissionsIcon from '../assets/icons/PermissionsIcon.svg'
+import { CiCalendar } from "react-icons/ci"
+import { GrUserWorker } from "react-icons/gr"
+import { LuBriefcaseBusiness, LuLayoutDashboard, LuUsersRound } from "react-icons/lu"
+import { PiBookLight, PiEnvelopeOpenBold } from "react-icons/pi"
+import { TbFileReport, TbMoneybag } from "react-icons/tb"
+
+ 
 
 const navItems = [
         {
             label: 'لوحه التحكم', 
-            icon: ControlIcon, 
+            icon: <LuLayoutDashboard size={25} /> , 
             path: '/dashboard'
         },
         {
             label: 'الحجوزات', 
-            icon: ReservationsIcon , 
+            icon:  <PiBookLight size={25}/>, 
             path: '/reservations'
         },
         {
             label: 'الجداول', 
-            icon: SchedulesIcon, 
+            icon: <CiCalendar size={25}/> , 
             path: '/schedules'
         },
         {
             label: 'الطلاب', 
-            icon: StudentsIcon, 
+            icon: <LuUsersRound size={25}/>
+            , 
             path: '/students'
         },
         {
             label: 'المدرسين', 
-            icon: TeachersIcon, 
+            icon: <LuBriefcaseBusiness size={25}/>
+            , 
             path: '/teachers'
         },
         {
             label: 'الماليات', 
-            icon: FinancesIcon, 
+            icon: <TbMoneybag size={25}/>
+            , 
             path: '/finances'
         },
         {
             label: 'التقارير', 
-            icon: ReportsIcon, 
+            icon: <TbFileReport size={25}/>
+            , 
             path: '/reports'
         },
         {
             label: 'sms', 
-            icon: SmsIcon, 
+            icon: <PiEnvelopeOpenBold size={25}/>
+            , 
             path: '/messages'
         },
         {
             label: 'شوؤن العاملين', 
-            icon: PermissionsIcon, 
+            icon: <GrUserWorker size={25}/>, 
             path: '/permissions'
         },
     ]
